@@ -1,7 +1,12 @@
 [package]
 name = "embargoed"
 version = "0.1.0"
+authors = ["Lílian Ferreira de Freitas <lily.mosquitoes@gmail.com>"]
 edition = "2021"
+license = "MIT AND Apache-2.0"
+description = "Rust library to intercept all requests from Russian IP addresses to any Rocket application and respond with a pro-Ukraine message instead"
+readme = "README.md"
+repository = "https://github.com/lily-mosquitoes/embargoed-rust"
 
 [dependencies]
 maxminddb = { version = "0.21.0", features = ["mmap"] }

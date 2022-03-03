@@ -16,7 +16,7 @@ Add `embargoed` to your dependencies on `Cargo.toml`:
 // --snip--
 
 [dependencies]
-embargoed = { git = https://github.com/lily-mosquitoes/embargoed-rust }
+embargoed = "0.1.0"
 ```
 
 Then in your `rocket::build()` attach `embargoed::fairing()`, as in this example:

@@ -1,3 +1,23 @@
+/// `embargoed` is a Rust library for [Rocket](https://rocket.rs/), which implements a fairing that can be used to block all requests from Russian IP addresses and display a pro-Ukraine message instead.
+///
+/// This is a port of the [Embargoed](https://github.com/rameerez/embargoed) Gem (for Ruby/Rails) by [rameerez](https://github.com/rameerez).
+/// > check out their official [list of ports for other frameworks](https://github.com/rameerez/embargoed-list).
+///
+/// to use simply attach the fairing to your Rocket build, like in this example (using Rocket version 0.5.0-rc.1):
+/// #[macro_use] extern crate rocket;
+///
+/// #[get("/test")]
+/// fn test() -> &'static str {
+///     "not embargoed"
+/// }
+///
+/// #[launch]
+/// fn rocket() -> _ {
+///     rocket::build()
+///         .attach(embargoed::fairing())
+///         .mount("/", routes![test])
+/// }
+
 use maxminddb;
 use std::net::IpAddr;
 use rocket::{

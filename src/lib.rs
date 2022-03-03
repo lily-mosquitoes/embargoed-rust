@@ -4,6 +4,7 @@
 /// > check out their official [list of ports for other frameworks](https://github.com/rameerez/embargoed-list).
 ///
 /// to use simply attach the fairing to your Rocket build, like in this example (using Rocket version 0.5.0-rc.1):
+/// ```
 /// #[macro_use] extern crate rocket;
 ///
 /// #[get("/test")]
@@ -17,6 +18,7 @@
 ///         .attach(embargoed::fairing())
 ///         .mount("/", routes![test])
 /// }
+/// ```
 
 use maxminddb;
 use std::net::IpAddr;

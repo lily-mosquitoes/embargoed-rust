@@ -11,7 +11,7 @@ This is the message which will replace all pages of your application:
 </p>
 
 ## How to use
-Add `embargoed` to your dependencies on `Cargo.toml`:
+`embargoed` is pucblished in [crates.io](https://crates.io/crates/embargoed), so simply add it to your dependencies on `Cargo.toml`:
 ```
 // --snip--
 
